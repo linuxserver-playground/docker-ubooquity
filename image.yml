@@ -8,9 +8,10 @@ summary: |-
 upstream:
   url: https://vaemendis.net/ubooquity/
   version:
-    type: command
-    run: |-
-      curl -IsL -w %{url_effective} -o /dev/null http://vaemendis.net/ubooquity/service/download.php | sed 's|.*Ubooquity-\([0-9\.]*\).zip|\1|'
+    type: regex
+    url: http://vaemendis.net/ubooquity/service/download.php
+    pattern: Ubooquity-([0-9.]+)\.zip
+    search: url
 
 release:
   branch: master
