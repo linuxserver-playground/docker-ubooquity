@@ -14,6 +14,9 @@ upstream:
     search: url
     require_assets:
       - 'https://vaemendis.net/ubooquity/downloads/Ubooquity-${VERSION}.zip'
+  sponsor:
+  - name: Donate (PayPal)
+    url: https://vaemendis.net/ubooquity/static8/donate
 
 release:
   branch: master
