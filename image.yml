@@ -12,6 +12,8 @@ upstream:
     url: http://vaemendis.net/ubooquity/service/download.php
     pattern: Ubooquity-([0-9.]+)\.zip
     search: url
+    require_assets:
+      - 'https://vaemendis.net/ubooquity/downloads/Ubooquity-${VERSION}.zip'
 
 release:
   branch: master
